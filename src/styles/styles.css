@@ -1,0 +1,81 @@
+:root {
+    --bg-color: #DDE1E7;
+    --dark-gray: #222222;
+    --light-shadow: #FFFDFD;
+    --dark-shadow: #BABECC;
+}
+
+@font-face {
+    font-family: noah;
+    src: url('/noah-regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: noah;
+    src: url('/noah-bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: entypo;
+    src: url('/entypo.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-gray);
+    font-family: noah, entypo;
+    font-weight: normal;
+}
+
+button {
+    font-size: 24px;
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px var(--dark-shadow), -5px -5px 10px var(--light-shadow);
+    animation-duration: 150ms;
+    animation-name: on-up;
+}
+
+button:active {
+    animation-duration: 150ms;
+    animation-name: on-down;
+    animation-fill-mode: forwards;
+}
+
+@keyframes on-down {
+    0% {
+        box-shadow: 2px 2px 5px var(--dark-shadow), -5px -5px 10px var(--light-shadow);
+    }
+    50% {
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: inset 2px 2px 5px var(--dark-shadow), inset -5px -5px 10px var(--light-shadow);
+    }
+}
+
+@keyframes on-up {
+    0% {
+        box-shadow: inset 2px 2px 5px var(--dark-shadow), inset -5px -5px 10px var(--light-shadow);
+    }
+    50% {
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: 2px 2px 5px var(--dark-shadow), -5px -5px 10px var(--light-shadow);
+    }
+}

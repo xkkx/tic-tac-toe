@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="75mm" height="75mm"
+    version="1.1"
+    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+    viewBox="0 0 6943.4 6943.4"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:31.36;stroke-miterlimit:22.9256}
+    .str2 {stroke:#222222;stroke-width:195.96;stroke-miterlimit:22.9256}
+    .str1 {stroke:#222222;stroke-width:195.96;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .fil1 {fill:none}
+    .fil0 {fill:#DDE1E7}
+   ]]>
+  </style>
+ </defs>
+ <g>
+  <rect class="fil0" width="6943.4" height="6943.4" rx="600.88" ry="600.88"/>
+  <line class="fil1 str0" x1="2314.47" y1="0" x2="2314.47" y2= "6943.4" />
+  <line class="fil1 str0" x1="4628.93" y1="0" x2="4628.93" y2= "6943.4" />
+  <line class="fil1 str0" x1="-0" y1="4628.93" x2="6943.4" y2= "4628.93" />
+  <line class="fil1 str0" x1="6943.4" y1="2314.47" x2="-0" y2= "2314.47" />
+  <path class="fil1 str1" d="M4231.94 2711.46l-1520.47 1520.47m0 -1520.47l1520.47 1520.47"/>
+  <circle class="fil1 str2" cx="5786.17" cy="1157.23" r="844.63"/>
+ </g>
+</svg>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tic Tac Toe with interdimensional time travel</title>
+        <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    </head>
+
+    <body>
+        <div class="game-container">
+            <div class="game-header">
+                <h1 class="game-name">Tic Tac Toe with interdimensional time travel</h1>
+                <hr style="margin: 20px 0">
+                <div class="game-controls">
+                    <div class="inlineText">
+                        <h1 id="moveText"></h1>
+                        <h1 id="currentPlayer"></h1>
+                    </div>
+                    <button id="restart">🔄</button>
+                </div>
+            </div>
+            <div id="main" class="game-content"></div>
+        </div>
+
+        <div id="popup">
+            <div class="popup-container">
+                <div class="popup">
+                    <h2>Game over</h2>
+                    <p id="popupText"></p>
+                    <button class="popup-button" id="viewBoard">View board</button>
+                    <button class="popup-button" id="playAgain">Play again</button>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="src/main.ts"></script>
+    </body>
+
+    <style>
+    </style>
+
+</html>

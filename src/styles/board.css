@@ -1,0 +1,78 @@
+.tic-tac-toe-container {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 5px var(--dark-shadow), inset -5px -5px 10px var(--light-shadow);
+}
+
+.tic-tac-toe-container .board-container {
+    transform-origin: 0px 0px;
+}
+
+.tic-tac-toe-container .link-container {
+    position: absolute;
+    overflow: visible;
+    stroke: black;
+    stroke-width: 1;
+    fill: none;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.tic-tac-toe-container .board {
+    position: absolute;
+    padding: 10px;
+    user-select: none;
+    background-color: var(var(--bg-color));
+    border-radius: 3px;
+    box-shadow: -3px -3px 7px var(--light-shadow), 3px 3px 5px var(--dark-shadow);
+}
+
+.tic-tac-toe-container .board-text {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tic-tac-toe-container .cell-container {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 5px var(--dark-shadow), inset -5px -5px 10px var(--light-shadow);
+}
+
+.tic-tac-toe-container .cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.tic-tac-toe-container .cell:nth-child(3n-1) {
+    border-left: 1px solid var(--dark-gray);
+    border-right: 1px solid var(--dark-gray);
+}
+
+.tic-tac-toe-container .cell:nth-child(n+4):nth-child(-n+6) {
+    border-top: 1px solid var(--dark-gray);
+    border-bottom: 1px solid var(--dark-gray);
+}
+
+.tic-tac-toe-container .cell-last-move {
+    background-color: rgba(255, 140, 0, 0.5);
+}
+
+.tic-tac-toe-container .cell-valid-move {
+    background-color: rgba(255, 255, 47, 0.5);
+}
+
+.tic-tac-toe-container .cell-invalid-move {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.tic-tac-toe-container .cell-removed-move {
+    color: #22222255;
+}
