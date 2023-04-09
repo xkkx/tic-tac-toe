@@ -123,7 +123,7 @@ export class BoardDisplay {
         currentPlayerDispaly.textContent = player;
 
         const tree = cacheToCacheAsTree(this.timeline.getStates(), this.timeline.getCache());
-        const root = d3.tree<BoardTree>().nodeSize([200, 200])(d3.hierarchy<BoardTree>(tree));
+        const root = d3.tree<BoardTree>().nodeSize([150, 150])(d3.hierarchy<BoardTree>(tree));
 
         root.descendants().forEach((node) => {
             const boardId = node.data.id;
