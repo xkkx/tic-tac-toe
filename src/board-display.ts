@@ -128,7 +128,23 @@ export class BoardDisplay {
         root.descendants().forEach((node) => {
             const boardId = node.data.id;
             const boardData = node.data.data;
-            const move = player === CellState.O && boardData.moveCharacter === CellState.Empty ? Move.Impossible : (player !== boardData.moveCharacter ? Move.Branch : Move.Edit);
+
+            let hasImpossibleChild = false;
+
+            this.forEachDescendant(node.data, (board) => {
+                if (board.data.board.every((cell) => cell !== CellState.Empty))
+                    hasImpossibleChild = true;
+            });
+
+            let move: Move;
+
+            if ((player === CellState.O && boardData.moveCharacter === CellState.Empty) || boardData.board.every((cell) => cell !== CellState.Empty)) {
+                move = Move.Impossible;
+            } else if (player !== boardData.moveCharacter) {
+                move = Move.Branch;
+            } else {
+                move = hasImpossibleChild ? Move.Impossible : Move.Edit;
+            }
 
             const [board, boardText, cells] = this.getBoardOrDefault(boardId);
 
